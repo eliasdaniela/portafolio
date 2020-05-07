@@ -59,7 +59,7 @@ a:active {
   /* Desktop */
   .home-container {
     display: grid;
-    grid-template-rows: 10vh auto 10vh;
+    grid-template-rows: 7vh auto 10vh;
     align-items: center;
   }
 }
@@ -116,17 +116,18 @@ a:active {
 /* Footer */
 .footer {
   position: relative;
-  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #ebebeb;
 }
 
 .footer .container {
   position: absolute;
   min-width: 100vw;
-  height: 10vh;
+  height: 0vh;
   bottom: 0;
   border-top: 1px solid var(--primary);
-  padding-left: 20px;
   font-size: 13px;
   color: #0047ff;
 }
@@ -134,13 +135,20 @@ a:active {
 @media (min-width: 40em) {
   /* Desktop */
   .footer .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-height: 40px;
   }
 
-  .footer .container > * {
-    padding: 0 3em;
+  .footer .container ul {
+    align-self: center;
+    display: flex;
+    justify-content: space-evenly;
+    background: honeydew;
+  }
+  .footer .container p {
+    text-align: right;
+    padding-right: 10px;
   }
 }
 
@@ -150,7 +158,7 @@ a:active {
 /* Proyectos Container */
 .grid-container {
   display: grid;
-  grid-template-rows: 10vh auto 10vh;
+  grid-template-rows: 10vh auto 5vh;
   height: 100vh;
 }
 
@@ -203,6 +211,22 @@ a:active {
     width: 60%;
     margin: 0 auto;
   }
+}
+
+/* Sobre Mi */
+
+.sobre-mi {
+  font-family: everett-light;
+  font-size: 20 px;
+  color: #0047ff;
+}
+
+/* Contacto */
+
+.contacto {
+  font-family: everett-light;
+  font-size: 20 px;
+  color: #0047ff;
 }
 
 /* Footer proyectos */
