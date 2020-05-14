@@ -116,6 +116,10 @@ main {
   border-bottom: 1px solid black;
 }
 
+[alt] {
+  background: var(--background);
+}
+
 [alt] .header {
   border-bottom: 1px solid black;
 }
@@ -206,7 +210,7 @@ main {
 }
 
 .proyectos-image-container img {
-  max-width: 66%;
+  max-width: 60%;
   margin: 0 auto;
 }
 
@@ -238,14 +242,32 @@ main {
   }
 }
 
+/* Proyecto */
+.proyecto {
+  background: var(--background);
+  display: grid;
+  grid-auto-rows: auto 1fr;
+  gap: 1em;
+}
+
+.proyecto > * {
+  padding: 1em;
+}
+
+.proyecto-imagen img {
+  padding-bottom: 1em;
+}
+
 /* Contacto */
 .contacto {
   background-image: url(../assets/images/contacto-bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  position: relative;
   overflow: show;
   display: grid;
+  grid-template-columns: 1fr;
   align-content: center;
   justify-content: center;
   height: 100%;
@@ -253,6 +275,8 @@ main {
   width: 50vw;
   border: none;
   color: var(--primary);
+  /* background: #ebebeb; */
+  z-index: -1;
 }
 
 .contacto > * {
