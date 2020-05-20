@@ -112,8 +112,8 @@ img {
 
 /* Main */
 main {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid #0047ff;;
+  border-bottom: 1px solid #0047ff;;
 }
 
 [alt] {
@@ -121,11 +121,11 @@ main {
 }
 
 [alt] .header {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #0047ff;
 }
 
 [alt] .footer {
-  border-top: 1px solid black;
+  border-top: 1px solid #0047ff);
 }
 
 /* Footer */
@@ -229,7 +229,7 @@ main {
 
   .proyectos-list-container li {
     padding: 3.5vh 0;
-    border: 1px solid white;
+    border: 1px solid --background;
     background: none;
   }
 
@@ -287,5 +287,5 @@ main {
 *    Utilities
 *****************************************/
 .outline {
-  outline: 2px dotted var(--black);
+  outline: 2px dotted var(--primary);
 }
