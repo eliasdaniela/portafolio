@@ -30,6 +30,7 @@ html {
 
 body {
   color: var(--black);
+  background: var(--background);
   font-family: var(--font-family);
   font-size: 100%;
   font-size: calc(17px + (20 - 17) * ((100vw - 680px) / (1400 - 680)));
@@ -83,33 +84,42 @@ img {
   align-self: center;
 }
 
+/* Menu */
 #menu {
-  position: absolute;
-  right: 5vw;
-  top: 10px;
-}
-
-#menu:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
-
-.menu-list-items {
   position: relative;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
 }
 
-.menu-list-items li {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+#menu:hover,
+#menu:focus {
+  outline: none;
+  opacity: 1;
+  transition-delay: 0.3s;
 }
 
-@media screen and (min-width: 40em) {
-  #menu {
-    top: 14.5px;
-  }
+.menu-items {
+  margin-top: 2em;
+  position: fixed;
+  transform: translateX(-1em);
+  border-radius: 4px;
+  background: transparent;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
 }
 
+.menu-items a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 3em;
+}
+
+.menu-items a:hover {
+  color: rebeccapurple;
+  text-decoration: underline;
+}
 /* Main */
 main {
   border-top: 1px solid #0047ff;;
@@ -131,34 +141,42 @@ main {
 /* Footer */
 .footer {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  min-height: 10vh;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 5vh;
   font-size: 0.9em;
   color: var(--primary);
 }
 
 .footer-menu {
-  display: flex;
-  flex-wrap: wrap;
-  text-transform: uppercase;
-}
-
-.footer-menu li:nth-child(2) {
-  padding: 0 2em;
+  display: none;
 }
 
 .footer p {
   padding-top: 0.8em;
   font-size: 0.6em;
+  text-align: right;
 }
 
 @media screen and (min-width: 40em) {
   /* Desktop */
+  .footer-menu {
+    display: flex;
+  }
+
   .footer {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    min-height: 7vh;
+    align-content: center;
+    min-height: 10vh;
+    font-size: 0.9em;
+    color: var(--primary);
+  }
+  
+
+  .footer-menu li:nth-child(2) {
+    padding: 0 2em;
   }
 
   .footer p {
