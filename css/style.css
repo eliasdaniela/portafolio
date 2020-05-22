@@ -44,6 +44,11 @@ a {
   color: var(--primary);
   text-decoration: none;
   cursor: pointer;
+  transition: all 0.2s;
+}
+
+a:hover {
+  color: #ff6c02;
 }
 
 img {
@@ -103,7 +108,7 @@ img {
 .menu-items {
   margin-top: 2em;
   position: fixed;
-  transform: translateX(-1em);
+  transform: translateX(-2em);
   border-radius: 4px;
   background: transparent;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
@@ -116,14 +121,10 @@ img {
   height: 3em;
 }
 
-.menu-items a:hover {
-  color: rebeccapurple;
-  text-decoration: underline;
-}
 /* Main */
 main {
-  border-top: 1px solid #0047ff;;
-  border-bottom: 1px solid #0047ff;;
+  border-top: 1px solid #0047ff;
+  border-bottom: 1px solid #0047ff;
 }
 
 [alt] {
@@ -135,7 +136,7 @@ main {
 }
 
 [alt] .footer {
-  border-top: 1px solid #0047ff);
+  border-top: 1px solid #0047ff;
 }
 
 /* Footer */
@@ -173,7 +174,6 @@ main {
     font-size: 0.9em;
     color: var(--primary);
   }
-  
 
   .footer-menu li:nth-child(2) {
     padding: 0 2em;
@@ -196,6 +196,7 @@ main {
   margin: 0 auto;
   max-width: 50vw;
   border: none;
+  color: #0047ff;
 }
 
 .sobre-mi > * {
