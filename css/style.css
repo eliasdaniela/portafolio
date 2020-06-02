@@ -197,6 +197,7 @@ main {
   max-width: 50vw;
   border: none;
   color: #0047ff;
+  font-size: 15px;
 }
 
 .sobre-mi > * {
@@ -246,6 +247,10 @@ main {
     background: var(--gray-bg);
   }
 
+  a:hover {
+    color: #ff6c02;
+  }
+
   .proyectos-list-container li {
     padding: 3.5vh 0;
     border: 1px solid --background;
@@ -271,6 +276,12 @@ main {
 
 .proyecto > * {
   padding: 1em;
+  color: #0047ff;
+}
+
+.proyecto-descripcion {
+  color: #0047ff;
+  font-size: 15px;
 }
 
 .proyecto-imagen img {
@@ -296,6 +307,7 @@ main {
   color: var(--primary);
   /* background: #ebebeb; */
   z-index: -1;
+  font-size: 15px;
 }
 
 .contacto > * {
@@ -306,5 +318,5 @@ main {
 *    Utilities
 *****************************************/
 .outline {
-  outline: 2px dotted var(--primary);
+  outline: 1px dotted var(--primary);
 }
