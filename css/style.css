@@ -89,6 +89,15 @@ img {
   align-self: center;
 }
 
+.centrar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 /* Menu */
 #menu {
   position: relative;
@@ -205,9 +214,113 @@ main {
 }
 
 /* Proyectos */
+/* Proyectos */
 .proyectos {
   display: grid;
-  grid-auto-rows: 41.25vh; /* Dividimos el todal del header & footer entre 2 */
+}
+
+.proyectos-list {
+  display: flex;
+  flex-direction: column;
+  background: var(--gray-bg);
+}
+
+.proyectos-list li {
+  padding: 3.5vh 0;
+  border-bottom: 1px solid var(--white);
+}
+
+.proyectos-list li:hover {
+  filter: contrast(110%);
+}
+
+.proyectos-list li.imagen {
+  min-height: 600px;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  transition: all 1s 0.3s cubic-bezier(0, 1, 0.3, 1);
+}
+
+/* Aqui comienza la animacion de los proyectos */
+.proyectos-list li.imagen[data-name="lesgai"] {
+  background: rgba(102, 102, 102, 1) url("../assets/images/37-lesgai3.jpg")
+    center no-repeat;
+}
+
+.proyectos-list li.imagen[data-name="desastres"] {
+  background: rgba(102, 102, 102, 1)
+    url("https://assets.codepen.io/2322424/arch1.jpg") center no-repeat;
+}
+
+.proyectos-list li.imagen[data-name="malba"] {
+  background: rgba(102, 102, 102, 1)
+    url("https://assets.codepen.io/2322424/malba-abril.jpg") center no-repeat;
+}
+
+.proyectos-list li.imagen[data-name="thessa"] {
+  background: rgba(102, 102, 102, 1)
+    url("https://assets.codepen.io/2322424/t2.jpg") center no-repeat;
+}
+
+.proyectos-list li.imagen[data-name="fiesta"] {
+  background: rgba(102, 102, 102, 1)
+    url("https://assets.codepen.io/2322424/chucho.jpg") center no-repeat;
+}
+
+.proyectos-list li.imagen[data-name="polietileno"] {
+  background: rgba(102, 102, 102, 1)
+    url("https://assets.codepen.io/2322424/poster.jpg") center no-repeat;
+}
+
+.proyectos-list li.imagen[data-name="exex"] {
+  background: rgba(102, 102, 102, 1)
+    url("https://assets.codepen.io/2322424/tra1.jpg") center no-repeat;
+}
+
+.proyectos-list li.imagen[data-name="wotw"] {
+  background: rgba(102, 102, 102, 1)
+    url("https://assets.codepen.io/2322424/wotw1.jpg") center no-repeat;
+}
+.proyectos-list li.imagen[data-name="veneneux"] {
+  background: rgba(102, 102, 102, 1)
+    url("https://assets.codepen.io/2322424/v.jpg") center no-repeat;
+}
+
+.proyectos-list li.imagen[data-name="manual"] {
+  background: rgba(102, 102, 102, 1)
+    url("https://assets.codepen.io/2322424/06.jpg") center no-repeat;
+}
+.proyectos-list li.imagen[data-name="verdi"] {
+  background: rgba(102, 102, 102, 1)
+    url("https://assets.codepen.io/2322424/06.jpg") center no-repeat;
+}
+
+.proyectos-list a {
+  color: var(--white);
+  padding: 0 5vw;
+}
+
+/* Proyecto */
+.proyecto {
+  background: var(--background);
+  display: grid;
+  grid-auto-rows: auto 1fr;
+  gap: 1em;
+}
+
+.proyecto > * {
+  padding: 1em;
+}
+
+.proyecto-imagen img {
+  padding-bottom: 1em;
+}
+/*
+.proyectos {
+  display: grid;
+  grid-auto-rows: 41.25vh; 
 }
 
 .proyectos-list-container {
@@ -265,7 +378,7 @@ main {
     max-width: 100%;
   }
 }
-
+*/
 /* Proyecto */
 .proyecto {
   background: var(--background);
